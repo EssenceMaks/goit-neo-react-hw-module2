@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 
-// Создаем контекст с начальным значением
+// Створюємо контекст з початковим значенням
 const ThemeContext = createContext({
   isDarkTheme: true,
   toggleTheme: () => {}
@@ -11,11 +11,11 @@ export const useTheme = () => useContext(ThemeContext);
 export const ThemeProvider = ({ children }) => {
   const [isDarkTheme, setIsDarkTheme] = useState(() => {
     const savedTheme = localStorage.getItem('theme');
-    // Если тема не сохранена или 'dark', возвращаем true
+    // Якщо тема не збережена або 'dark', повертаємо true
     return !savedTheme || savedTheme === 'dark';
   });
 
-  // Применяем тему при монтировании и при изменении
+  // Застосовуємо тему при монтуванні та при зміні
   useEffect(() => {
     const theme = isDarkTheme ? 'dark' : 'light';
     localStorage.setItem('theme', theme);

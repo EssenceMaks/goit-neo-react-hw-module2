@@ -2,10 +2,10 @@ import { useTheme } from '../../context/ThemeContext';
 import css from './ThemeToggler.module.css';
 
 export const ThemeToggler = () => {
-  // Проверяем, что useTheme возвращает объект перед деструктуризацией
+  // Перевіряємо, що useTheme повертає об'єкт перед деструктуризацією
   const themeContext = useTheme();
   
-  // Если контекст не определен, показываем кнопку без функциональности
+  // Якщо контекст не визначений, показуємо кнопку без функціональності
   if (!themeContext) {
     console.error('ThemeContext не определен. Проверьте, что ThemeProvider правильно настроен.');
     return (

@@ -4,7 +4,6 @@ import { ThemeProvider } from './context/ThemeContext'
 import './index.css'
 import App from './App.jsx'
 
-// Применяем сохраненную тему сразу при загрузке
 const savedTheme = localStorage.getItem('theme') || 'dark';
 document.body.setAttribute('data-theme', savedTheme);
 
