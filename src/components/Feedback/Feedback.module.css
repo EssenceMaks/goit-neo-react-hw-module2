@@ -1,0 +1,24 @@
+.feedback {
+  color: var(--text-color);
+  background-color: var(--card-background);
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: 1px solid var(--border-color);
+}
+
+.feedbackItem {
+  margin: 10px 0;
+  font-size: 1.1em;
+  font-family: var(--font-primary);
+}
+
+.total {
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.positive {
+  color: var(--accent-color);
+  font-weight: bold;
+} 
